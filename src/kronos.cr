@@ -16,7 +16,7 @@ DB.open "sqlite3://./data.db" do |db|
   db.exec "BEGIN TRANSACTION;"
   users = ["Pierre", "Loic", "Galina", "Ivan", "Florent"]
   i = 0
-  while i < 15_000_000
+  while i < 5_000_000
     puts i
     db.exec "insert into logs values (?, ?, ?, ?)", UUID.random.to_s, users.sample, Random::Secure.urlsafe_base64(128, padding: true), Time.utc().to_unix
     i += 1
