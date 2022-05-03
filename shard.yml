@@ -1,0 +1,17 @@
+name: kronos
+version: 0.1.0
+
+authors:
+  - Loïc Tosser <loic@kalvad.com>
+
+targets:
+  kronos:
+    main: src/kronos.cr
+
+dependencies:
+  sqlite3:
+    github: crystal-lang/crystal-sqlite3
+
+crystal: 1.4.1
+
+license: MIT
